@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>課題11 ToDo Lv2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>課題12：ToDo Lv2.5</h1>
+
+    <div class="add">
+      <input id="todoInput" type="text" placeholder="ToDoを入力" />
+      <button id="addBtn">追加</button>
+    </div>
+
+    <div class="filters">
+      <button data-filter="all" class="filter active">All</button>
+      <button data-filter="active" class="filter">Active</button>
+      <button data-filter="done" class="filter">Done</button>
+    </div>
+
+    <div class="tools">
+      <input id="searchInput" type="text" placeholder="検索(例：買い物)">
+
+      <select id="sortSelect">
+        <option value="new">新しい順</option>
+        <option value="old">古い順</option>
+        <option value="activeFirst">未完了優先</option>
+      </select>
+    </div>
+
+    <div class="progress">
+      <div id="progressBar" class="bar"></div>
+    </div>
+    <p id="progressText" class="progressText"></p>
+
+    <div class="bulk">
+      <button id="toggleAllBtn" type="button">全て 完了/未完了</button>
+      <button id="clearDoneBtn" type="button">完了一括削除</button>
+    </div>
+
+    <ul id="todoList" class="list"></ul>
+
+    <p id="status" class="status"></p>
+  </main>
+
+<script src="js/state.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/view.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
